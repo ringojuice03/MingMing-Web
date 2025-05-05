@@ -14,8 +14,8 @@ if [[ "$OSTYPE" == "linux-gnu"* || "$OSTYPE" == "darwin"* ]]; then
     # For Linux/macOS
     source env/bin/activate
 elif [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
-    # For Windows
-    ./env/Scripts/activate.bat
+    # For Git Bash on Windows
+    source env/Scripts/activate
 else
     echo "Unsupported OS"
     exit 1
