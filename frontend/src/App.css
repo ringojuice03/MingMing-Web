@@ -113,10 +113,12 @@ svg {
   color: black;
 }
 
-.logo{
+.header-logo{
   height: var(--size-300); 
 }
 
-/* Section Styles */
+/* Footer Styles */
+
+
 
 
