@@ -141,8 +141,15 @@ svg {
 }
 
 .newsletter-icon{
-  height: var(--size-400);
-  width: auto;
+  width: var(--size-400);
+  aspect-ratio: 1;
+}
+
+.cta-newsletter{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(var(--size-250), 5vh, var(--size-300));
 }
 
 /* Utility Classes */
