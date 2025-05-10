@@ -5,6 +5,11 @@
     --clr-neutral-200: #F7F3ED;
     --clr-neutral-900: black;
     
+    --fs-heading: 6.25rem;
+    --fs-subheading: 2rem;
+    --fs-paras: 1rem;
+    --fs-footer-heading: 2.5rem;
+
     --size-50: 0.5rem;
     --size-100: 1rem;
     --size-200: 2rem;
@@ -150,6 +155,15 @@ svg {
   align-items: center;
   justify-content: flex-start;
   gap: clamp(var(--size-250), 5vh, var(--size-300));
+}
+
+.cta-newsletter > p, a{
+  text-decoration: none;
+  color: black;
+}
+
+.footer-wrapper{
+  display: flex; 
 }
 
 /* Utility Classes */
