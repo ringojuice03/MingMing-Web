@@ -19,6 +19,7 @@
     --size-500: 5rem;
     --size-600: 6rem;  
     --size-900: 9rem;
+    --size-1250: 12.5rem;
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset 
@@ -164,6 +165,13 @@ svg {
 
 .footer-wrapper{
   display: flex; 
+  justify-content: center;
+  gap: clamp(var(--size-250), 5vh, var(--size-1250));
+}
+
+.second-section{
+  display: flex;
+  gap: clamp(var(--size-250), 5vh, var(--size-300));
 }
 
 /* Utility Classes */
