@@ -7,6 +7,7 @@
     
     --size-100: 1rem;
     --size-200: 2rem;
+    --size-250: 2.5rem;
     --size-300: 3rem; 
     --size-900: 10rem;
 }
@@ -115,4 +116,7 @@ svg {
 .logo{
   height: var(--size-300); 
 }
+
+/* Section Styles */
+
 
