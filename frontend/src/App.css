@@ -122,5 +122,10 @@ svg {
   flex-shrink: 0;
 }
 
+/* Footer Styles */
+
+.footer-logo{
+  height: var(--size-600);
+}
 
 
