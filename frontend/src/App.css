@@ -8,8 +8,9 @@
     --size-100: 1rem;
     --size-200: 2rem;
     --size-250: 2.5rem;
-    --size-300: 3rem; 
-    --size-900: 10rem;
+    --size-300: 3rem;
+    --size-600: 6rem;  
+    --size-900: 9rem;
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset 
@@ -114,11 +115,12 @@ svg {
 }
 
 .header-logo{
-  height: var(--size-300); 
+  height: var(--size-300);
 }
 
-/* Footer Styles */
-
+.nav-wrapper > a{
+  flex-shrink: 0;
+}
 
 
 
