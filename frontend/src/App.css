@@ -135,7 +135,15 @@ svg {
   height: var(--size-600);
 }
 
+.footer{
+  border-top: 1px solid black;
+}
+
 /* Utility Classes */
+
+.padding-block-100{
+  padding-block: var(--size-100);
+}
 
 .padding-block-300{
   padding-block: var(--size-300);

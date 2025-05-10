@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
     return (
-        <footer className="footer | padding-block-300">
+        <footer className="footer | padding-block-100">
             <div className="container">
                 <div className="first-column">
                     <Link to="/"><img className="footer-logo" src="images/logo.png"/></Link>
