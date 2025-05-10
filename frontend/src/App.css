@@ -5,10 +5,12 @@
     --clr-neutral-200: #F7F3ED;
     --clr-neutral-900: black;
     
+    --size-50: 0.5rem;
     --size-100: 1rem;
     --size-200: 2rem;
     --size-250: 2.5rem;
     --size-300: 3rem;
+    --size-500: 5rem;
     --size-600: 6rem;  
     --size-900: 9rem;
 }
@@ -106,7 +108,7 @@ svg {
 
 .nav-list{
     display: flex;
-    gap: clamp(var(--size-100), 5vw, var(--size-300))
+    gap: clamp(var(--size-100), 5vw, var(--size-300));
 }
 
 .nav-list > * {
@@ -122,10 +124,13 @@ svg {
   flex-shrink: 0;
 }
 
+.buttons{
+  display: flex;
+  gap: clamp(var(--size-50), 2vw, var(--size-200));
+}
+
 /* Footer Styles */
 
 .footer-logo{
   height: var(--size-600);
 }
-
-
