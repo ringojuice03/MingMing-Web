@@ -158,7 +158,7 @@ svg {
   gap: clamp(var(--size-250), 5vh, var(--size-300));
 }
 
-.cta-newsletter > p, a{
+a{
   text-decoration: none;
   color: black;
 }
