@@ -5,28 +5,38 @@ export const Footer = () => {
         <footer className="footer | padding-block-100">
             <div className="container">
                 <div className="footer-wrapper">
-                    <div className="first-column">
-                        <Link to="/"><img className="footer-logo" src="images/logo.png"/></Link>
+                    <div className="first-section">
+                        <Link to="/" aria-label="Home"><img className="footer-logo" src="images/logo.png"/></Link>
                         <p>Baked to Perfection, Crafted for Delight</p>
-                        <div className="cta-newsletter">
-                            <p>Get our newsletter</p>
-                            <svg class="newsletter-icon">
-                                <use xlinkHref="images/newsletter-icon.svg#Group 22"></use>
-                            </svg>
+                        <div aria-label="newsletter">
+                            <Link to="/" className="cta-newsletter">
+                                <p>Get our newsletter</p>
+                                <svg class="newsletter-icon">
+                                    <use xlinkHref="images/newsletter-icon.svg#Group 22"></use>
+                                </svg>
+                            </Link>
                         </div>
                     </div>
-                    <div>
+                    <div className="second-section">
                         <div>
-                            <nav className="footer-nav">
-                                
+                            <nav>
+                                <ul role="list">
+                                    <li>
+                                        asdfadfas
+                                    </li>
+                                </ul>
                             </nav>
                         </div>
                         <div>
-
+                            123
                         </div>
                         <div>
                             <nav className="footer-nav-socials">
-                            
+                            <ul role="list">
+                                    <li>
+                                        asdfadfas
+                                    </li>
+                                </ul>
                             </nav>
                         </div>
                     </div>
