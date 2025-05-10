@@ -14,9 +14,12 @@ export const Header = () => {
                         </ul>
                     </nav>
                     <div className="buttons">
-                        <button>Cart</button>
-                        <button>Notifs</button>
-                        <button>Profile</button>
+                        {/* Cart */}
+                        <button>C</button> 
+                        {/* Notifs */}
+                        <button>N</button>
+                        {/* Profile */}
+                        <button>P</button>
                     </div>
                 </div>
             </div>
