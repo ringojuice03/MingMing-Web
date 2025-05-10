@@ -5,7 +5,7 @@ export const Header = () => {
         <header className="primary-header">
             <div className="container">
                 <div className="nav-wrapper">
-                    <Link to="/"><img className="logo" src="/images/logo.png" alt="MingMing Logo"/></Link> 
+                    <Link to="/"><img className="header-logo" src="/images/logo.png" alt="MingMing Logo"/></Link> 
                     <nav className="primary-navigation">
                         <ul aria-label="Primary" role="list" className="nav-list">
                             <Link to="/"><li>Home</li></Link>
