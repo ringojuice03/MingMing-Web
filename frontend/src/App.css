@@ -1,7 +1,14 @@
 :root{
     --clr-primary-700: #285141;
     --clr-primary-600: #85420E;
+    
     --clr-neutral-200: #F7F3ED;
+    --clr-neutral-900: black;
+    
+    --size-100: 1rem;
+    --size-200: 2rem;
+    --size-300: 3rem; 
+    --size-900: 10rem;
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset 
@@ -74,20 +81,38 @@ svg {
 
 /* Start of CSS Design */
 
+/*  */
+
 /* Header Styles */
+.primary-header{
+  padding-top: var(--size-200);
+}
+
 .container {
-    --max-width: 1110px;
-    --padding: 1rem;
-    width: min(var(--max-width), 100% - (var(--padding) * 2));
-    margin: auto;
+  --max-width: 1110px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin: auto;
 }
 
 .nav-wrapper{
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-list{
     display: flex;
-
+    gap: clamp(var(--size-100), 5vw, var(--size-300))
 }
+
+.nav-list > * {
+  text-decoration: none;
+  color: black;
+}
+
+.logo{
+  height: var(--size-300); 
+}
+
