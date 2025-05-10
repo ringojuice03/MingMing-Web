@@ -134,3 +134,13 @@ svg {
 .footer-logo{
   height: var(--size-600);
 }
+
+/* Utility Classes */
+
+.padding-block-300{
+  padding-block: var(--size-300);
+}
+
+.padding-block-500{
+  padding-block: var(--size-300);
+}
