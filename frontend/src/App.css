@@ -10,6 +10,7 @@
     --size-200: 2rem;
     --size-250: 2.5rem;
     --size-300: 3rem;
+    --size-400: 4rem;
     --size-500: 5rem;
     --size-600: 6rem;  
     --size-900: 9rem;
@@ -137,6 +138,11 @@ svg {
 
 .footer{
   border-top: 1px solid black;
+}
+
+.newsletter-icon{
+  height: var(--size-400);
+  width: auto;
 }
 
 /* Utility Classes */
