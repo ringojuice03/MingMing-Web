@@ -34,8 +34,8 @@ export const Home = () => {
                             </Link>
                         </div>
                         <div>
-                            <ImageTransition defSource={cookieLongSources[2]} hovSource={cookieLongSources[3]} alt={"peanut-butter-chocolate-swirl-cookies"}/>
-                            <ImageTransition defSource={cookieLongSources[1]} hovSource={cookieLongSources[0]} alt={"double-chocolate-chip-cookies"}/>
+                            <Link to="/"><ImageTransition defSource={cookieLongSources[2]} hovSource={cookieLongSources[3]} alt={"peanut-butter-chocolate-swirl-cookies"} isLong={true}/></Link>
+                            <Link to="/"><ImageTransition defSource={cookieLongSources[1]} hovSource={cookieLongSources[0]} alt={"double-chocolate-chip-cookies"} isLong={true}/></Link>
                         </div>
                     </div>
                     <div>
@@ -70,22 +70,22 @@ export const Home = () => {
                 <div className="container">
                     <div class="signature-wrapper">
                         <div>
-                            <Link><img src="" alt="" /></Link>
+                            <Link to="/"><ImageTransition defSource={cookieNormalSources[11]} hovSource={cookieNormalSources[10]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
                             <p>Iced Oatmeal Cookie</p>
                             <p>$99.50</p>
                         </div>
                         <div>
-                            <Link><img src="" alt="" /></Link>
+                            <Link to="/"><ImageTransition defSource={cookieNormalSources[7]} hovSource={cookieNormalSources[6]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
                             <p>Dark Chocolate Pecan Cookie</p>
                             <p>$99.50</p>
                         </div>
                         <div>
-                            <Link><img src="" alt="" /></Link>
+                            <Link to="/"><ImageTransition defSource={cookieNormalSources[3]} hovSource={cookieNormalSources[2]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
                             <p>Apple Cinnamon Cookie</p>
                             <p>$99.50</p>
                         </div>
                         <div>
-                            <Link><img src="" alt="" /></Link>
+                            <Link to="/"><ImageTransition defSource={cookieNormalSources[13]} hovSource={cookieNormalSources[12]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
                             <p>Peanut Butter Chocolate Swirl Cookies</p>
                             <p>$99.50</p>
                         </div>
