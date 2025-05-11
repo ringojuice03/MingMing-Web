@@ -49,8 +49,12 @@
     --size-1250: 12.5rem;
     --size-1425: 14.25rem;  
 
-    --img-height-long: 21.4375rem;
-    --img-width-long: 18.9375rem;
+
+    --img-height-long: 38.5rem;
+    --img-width-long: 25.6875rem;
+
+    --img-height-normal: 21.4375rem;
+    --img-width-normal: 18.9375rem;
 
 
     --fs-header-nav: 1.25rem;
