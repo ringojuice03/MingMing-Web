@@ -4,9 +4,18 @@ import { NewsLetterIcon } from "./svgComponents/NewsLetterIcon.js";
 import { CookieArt } from "./svgComponents/CookieArt.js";
 import { Jar } from "./svgComponents/Jar.js";
 import { Gift } from "./svgComponents/Gift.js";
+import { ImageTransition } from "./ImageTransition.js";
 
  
 export const Home = () => {
+    const cookieNormalContext = require.context("../cookieNormal");
+    const cookieLongContext = require.context("../cookieLong");
+
+    const cookieLongSources= cookieLongContext.keys().map(cookieLongContext);
+    const cookieNormalSources = cookieNormalContext.keys().map(cookieNormalContext);
+
+    console.log(cookieNormalSources);
+
     return(
         <main>
             <section>
@@ -25,8 +34,8 @@ export const Home = () => {
                             </Link>
                         </div>
                         <div>
-                            <img src="" alt="" />
-                            <img src="" alt="" />
+                            <ImageTransition defSource={cookieLongSources[2]} hovSource={cookieLongSources[3]} alt={"peanut-butter-chocolate-swirl-cookies"}/>
+                            <ImageTransition defSource={cookieLongSources[1]} hovSource={cookieLongSources[0]} alt={"double-chocolate-chip-cookies"}/>
                         </div>
                     </div>
                     <div>
