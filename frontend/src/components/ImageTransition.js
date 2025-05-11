@@ -7,15 +7,15 @@ export const ImageTransition = ({ defSource, hovSource, alt }) => {
     return(
         <div className={`image-wrapper ${isHovering ? "hovered" : ""} `}>
             <img
-                className="defSource"
-                src={defSource}
-                onMouseEnter={setIsHovering(true)}
-                onMouseLeave={setIsHovering(false)}
+                className="hovSource"
+                src={hovSource}
                 alt={alt}
             />
             <img
-                className="hovSource"
-                src={hovSource}
+                className="defSource"
+                src={defSource}
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
                 alt={alt}
             />
         </div>
