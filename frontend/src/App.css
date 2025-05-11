@@ -245,6 +245,39 @@ body{
   font-weight: 500;
 }
 
+/* Image Transition css */
+
+.image-wrapper{
+  position: relative;
+}
+
+.defSource,
+.hovSource{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.defSource{
+  opacity: 1;
+}
+
+.hovSource{
+  opacity: 0;
+}
+
+.image-wrapper.hovered .defSource{
+  opacity: 0;
+}
+
+.image-wrapper.hovered .hovSource{
+  opacity: 1;
+}
+
+
 /* Utility Classes */
 
 .padding-block-100{
