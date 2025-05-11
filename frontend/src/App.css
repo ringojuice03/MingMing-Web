@@ -1,24 +1,349 @@
+@font-face {
+  font-family: 'Noi Grotesk Trial';
+  src: url('fonts/NoiGroteskTrial-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noi Grotesk Trial';
+  src: url('fonts/NoiGroteskTrial-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Noi Grotesk Trial';
+  src: url('fonts/NoiGroteskTrial-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noi Grotesk Trial';
+  src: url('fonts/NoiGroteskTrial-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root{
+    --clr-primary-700: #285141;
+    --clr-primary-600: #85420E;
+    
+    --clr-neutral-200: #F7F3ED;
+    --clr-neutral-900: black;
+    
+    --size-50: 0.5rem;
+    --size-100: 1rem;
+    --size-180: 1.875rem;
+    --size-200: 2rem;
+    --size-250: 2.5rem;
+    --size-218: 2.1875rem;
+    --size-300: 3rem;
+    --size-400: 4rem;
+    --size-500: 5rem;
+    --size-600: 6rem;  
+    --size-750: 7.5rem;  
+    --size-900: 9rem;
+    --size-1000: 10rem;
+    --size-1250: 12.5rem;
+    --size-1425: 14.25rem;  
+
+
+    --img-height-long: 38.5rem;
+    --img-width-long: 25.6875rem;
+
+    --img-height-normal: 21.4375rem;
+    --img-width-normal: 18.9375rem;
+
+
+    --fs-header-nav: 1.25rem;
+    --fs-heading: 6.25rem;
+    --fs-subheading: 2rem;
+    --fs-paras: 1rem;
+    --fs-footer-heading: 2.5rem;
+    --fs-newsletter-cta: 2.1875rem; 
+
+
+    --ff-primary: 'League Spartan', sans-serif;
+    --ff-secondary: 'Noi Grotesk Trial', sans-serif;
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset 
+   This is for removing all the defaults      */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Start of CSS Design */
+
+
+/* Global Styles */
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
 body{
-  background-color: #282c34;
+  background-color: var(--clr-neutral-200);
+}
+
+.arrow-icon{
+  min-width: var(--size-400);
+  height: auto;
 }
 
 
-.center-column{
-    width:600px;
-    margin: 20px auto;
-    padding:20px;
-    background-color: #fff;
-    border-radius: 3px;
-    box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
-  }
+/* Header Styles */
+.primary-header{
+  padding-top: var(--size-200);
+  font-size: var(--fs-header-nav);
 
-.item-row{
-    background-color: #11a5c0;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 3px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 900px;
-    box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
-  }
+}
+
+.container {
+  --max-width: 1920px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin: auto;
+}
+
+.nav-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list{
+    display: flex;
+    gap: clamp(var(--size-100), 5vw, var(--size-300));
+}
+
+.header-logo{
+  height: var(--size-600);
+}
+
+.nav-wrapper > a{
+  flex-shrink: 0;
+}
+
+.buttons{
+  display: flex;
+  gap: clamp(var(--size-50), 2vw, var(--size-200));
+}
+
+.buttons > *{
+  cursor: pointer;
+  background-color: rgb(0 0 0 / 0);
+  border: none;
+}
+
+/* Main - Hero Styles */
+
+.hero-wrapper{
+  display: flex;
+  gap: var(--size-500);
+}
+
+.hero-text h1{
+  font-size: var(--fs-heading);
+}
+
+.hero-text p{
+  font-size: var(--fs-subheading);
+}
+
+.hero-text > p{
+  max-width: 38ch;
+}
+
+:where(.hero-text>:not(:first-child)){
+  padding-top: var(--size-218);
+}
+
+.hero-images{
+  display: flex;
+  gap: 1rem;
+}
+
+.shop-now-wrapper{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Footer Styles */
+
+.footer-logo{
+  height: var(--size-1425);
+}
+
+.footer{
+  border-top: 1px solid black;
+  font-family: var(--ff-primary);
+}
+
+.cta-footer-newsletter{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(var(--size-250), 5vh, var(--size-300));
+}
+
+.first-section > p{
+  font-size: var(--size-180);
+  font-weight: 300;
+  padding-bottom: var(--size-900);
+}
+
+
+.footer-wrapper{
+  display: flex;
+  justify-content: center; 
+  gap: clamp(var(--size-250), 7vh, var(--size-1250));
+}
+
+.fs-newsletter{
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-newsletter-cta);
+}
+
+/* Footer Styles - Second Section */
+
+.second-section{
+  display: flex;
+  padding-top: var(--size-1000);
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: clamp(var(--size-250), 5vh, var(--size-750));
+  font-size: var(--fs-newsletter-cta);
+}
+
+.second-section h3{
+  padding-bottom: var(--size-250);
+  font-size: var(--fs-footer-heading);
+  font-weight: 500;
+}
+
+/* Image Transition css */
+
+.image-wrapper{
+  position: relative;
+}
+
+.image-wrapper.img-long{
+  height: var(--img-height-long);
+  width: var(--img-width-long);
+}
+
+.image-wrapper.img-normal{
+  height: var(--img-height-normal);
+  width: var(--img-width-normal);
+}
+
+
+.defSource,
+.hovSource{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.defSource{
+  opacity: 1;
+}
+
+.hovSource{
+  opacity: 0;
+}
+
+.image-wrapper.hovered .defSource{
+  opacity: 0;
+}
+
+.image-wrapper.hovered .hovSource{
+  opacity: 1;
+}
+
+
+/* Utility Classes */
+
+.padding-block-100{
+  padding-block: var(--size-100);
+}
+
+.padding-block-300{
+  padding-block: var(--size-300);
+}
+
+.padding-block-500{
+  padding-block: var(--size-300);
+}

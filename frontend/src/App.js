@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Header } from "./components/Header";
+import { Home } from "./components/Home";
+import { Cookies } from "./components/Cookies";
+import { About } from "./components/About";
+import { Footer } from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <div className="center-column">
-       
-        <div className="item-row">
-          <span>Introduction Complete</span>
-        </div>
-
-        <div className="item-row">
-          <span>CERTIFICATE OF COMPLETION</span>
-        </div>
-
-        <div className="item-row">
-          <span>Awarded to: Isaac Barbosa</span>
-        </div>
-
-      </div>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/cookies" element={<Cookies />}/>
+          <Route path="/about" element={<About />}/>
+        </Routes>
+        <Footer />
+      </Router>
     </div>
   );
 }
