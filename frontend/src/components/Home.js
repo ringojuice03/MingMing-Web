@@ -21,19 +21,19 @@ export const Home = () => {
             <section>
                 <div className="container">
                     <div className="hero-wrapper">
-                        <div>
+                        <div className="hero-text">
                             <h1>Baked to Perfection, Crafted for Delight</h1>
                             <p>Indulge in a world where cookies are more than 
                                 just a treat—they're an experience. Handcrafted 
                                 with love, baked to golden perfection, and presented 
                                 as edible works of art, our cookies are made to satisfy 
                                 both your cravings and your eyes.</p>
-                            <Link to="/"> 
+                            <Link to="/" className="shop-now-wrapper"> 
                                 <p>Shop Now</p>
                                 <NewsLetterIcon />
                             </Link>
                         </div>
-                        <div>
+                        <div className="hero-images">
                             <Link to="/"><ImageTransition defSource={cookieLongSources[2]} hovSource={cookieLongSources[3]} alt={"peanut-butter-chocolate-swirl-cookies"} isLong={true}/></Link>
                             <Link to="/"><ImageTransition defSource={cookieLongSources[1]} hovSource={cookieLongSources[0]} alt={"double-chocolate-chip-cookies"} isLong={true}/></Link>
                         </div>
