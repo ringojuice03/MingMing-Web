@@ -180,6 +180,12 @@ body{
   gap: clamp(var(--size-50), 2vw, var(--size-200));
 }
 
+.buttons > *{
+  cursor: pointer;
+  background-color: rgb(0 0 0 / 0);
+  border: none;
+}
+
 /* Footer Styles */
 
 .footer-logo{
