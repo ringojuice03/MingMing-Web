@@ -1,7 +1,7 @@
 export const NewsLetterIcon = () => {
     return(
-        <svg class="newsletter-icon" width="130" height="111" viewBox="0 0 130 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="74.5" cy="55.5" r="54.25" stroke="#303030" stroke-width="1.5"/>
+        <svg className="newsletter-icon" width="130" height="111" viewBox="0 0 130 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="74.5" cy="55.5" r="54.25" stroke="#303030" strokeWidth="1.5"/>
             <path d="M91.0607 57.0607C91.6464 56.4749 91.6464 55.5251 91.0607 54.9393L81.5147 45.3934C80.9289 44.8076 79.9792 44.8076 79.3934 45.3934C78.8076 45.9792 78.8076 46.9289 79.3934 47.5147L87.8787 56L79.3934 64.4853C78.8076 65.0711 78.8076 66.0208 79.3934 66.6066C79.9792 67.1924 80.9289 67.1924 81.5147 66.6066L91.0607 57.0607ZM0 56L-1.16564e-07 57.5L90 57.5L90 56L90 54.5L1.16564e-07 54.5L0 56Z" fill="black"/>
         </svg>
     );
