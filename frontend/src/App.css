@@ -49,6 +49,9 @@
     --size-1250: 12.5rem;
     --size-1425: 14.25rem;  
 
+    --img-height-long: 21.4375rem;
+    --img-width-long: 18.9375rem;
+
 
     --fs-header-nav: 1.25rem;
     --fs-heading: 6.25rem;
@@ -249,6 +252,8 @@ body{
 
 .image-wrapper{
   position: relative;
+  width: var(--img-width-long);
+  height: var(--img-height-long);
 }
 
 .defSource,
