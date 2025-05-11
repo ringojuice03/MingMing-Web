@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from '../images/logo.png';
-import { NewsLetterIcon } from './NewsLetterIcon';
+import { NewsLetterIcon } from './svgComponents/NewsLetterIcon.js';
 
 export const Footer = () => {
     return (
@@ -11,7 +11,7 @@ export const Footer = () => {
                         <Link to="/" aria-label="Home"><img className="footer-logo" src={logo}/></Link>
                         <p>Baked to Perfection, Crafted for Delight</p>
                         <div aria-label="newsletter">
-                            <Link to="/" className="cta-newsletter | fs-newsletter">
+                            <Link to="/" className="cta-footer-newsletter | fs-newsletter">
                                 <p>Get our newsletter</p>
                                 <NewsLetterIcon />
                             </Link>
