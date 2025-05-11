@@ -139,6 +139,9 @@ svg {
 
 /* Start of CSS Design */
 
+
+/* Global Styles */
+
 a{
   text-decoration: none;
   color: black;
@@ -146,6 +149,11 @@ a{
 
 body{
   background-color: var(--clr-neutral-200);
+}
+
+.arrow-icon{
+  min-width: var(--size-400);
+  height: auto;
 }
 
 
@@ -194,6 +202,41 @@ body{
   border: none;
 }
 
+/* Main - Hero Styles */
+
+.hero-wrapper{
+  display: flex;
+  gap: var(--size-500);
+}
+
+.hero-text h1{
+  font-size: var(--fs-heading);
+}
+
+.hero-text p{
+  font-size: var(--fs-subheading);
+}
+
+.hero-text > p{
+  max-width: 38ch;
+}
+
+:where(.hero-text>:not(:first-child)){
+  padding-top: var(--size-218);
+}
+
+.hero-images{
+  display: flex;
+  gap: 1rem;
+}
+
+.shop-now-wrapper{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* Footer Styles */
 
 .footer-logo{
@@ -203,11 +246,6 @@ body{
 .footer{
   border-top: 1px solid black;
   font-family: var(--ff-primary);
-}
-
-.newsletter-icon{
-  min-width: var(--size-400);
-  height: auto;
 }
 
 .cta-footer-newsletter{
@@ -256,9 +294,18 @@ body{
 
 .image-wrapper{
   position: relative;
-  width: var(--img-width-long);
-  height: var(--img-height-long);
 }
+
+.image-wrapper.img-long{
+  height: var(--img-height-long);
+  width: var(--img-width-long);
+}
+
+.image-wrapper.img-normal{
+  height: var(--img-height-normal);
+  width: var(--img-width-normal);
+}
+
 
 .defSource,
 .hovSource{
