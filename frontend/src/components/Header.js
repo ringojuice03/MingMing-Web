@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
+import cart from '../images/cart.png';
+import notification from '../images/notification.png';
+import profile from '../images/profile.png';
 
 export const Header = () => {
     return(
@@ -15,12 +18,9 @@ export const Header = () => {
                         </ul>
                     </nav>
                     <div className="buttons">
-                        {/* Cart */}
-                        <button>C</button> 
-                        {/* Notifs */}
-                        <button>N</button>
-                        {/* Profile */}
-                        <button>P</button>
+                        <button><img src={cart}/></button> 
+                        <button><img src={notification}/></button>
+                        <button><img src={profile}/></button>
                     </div>
                 </div>
             </div>
