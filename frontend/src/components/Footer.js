@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import logo from '../images/logo.png';
+import newsLetterIcon from '../images/newsLetterIcon.png';
 
 export const Footer = () => {
     return (
@@ -6,14 +8,12 @@ export const Footer = () => {
             <div className="container">
                 <div className="footer-wrapper">
                     <div className="first-section">
-                        <Link to="/" aria-label="Home"><img className="footer-logo" src="images/logo.png"/></Link>
+                        <Link to="/" aria-label="Home"><img className="footer-logo" src={logo}/></Link>
                         <p>Baked to Perfection, Crafted for Delight</p>
                         <div aria-label="newsletter">
                             <Link to="/" className="cta-newsletter">
                                 <p>Get our newsletter</p>
-                                <svg class="newsletter-icon">
-                                    <use xlinkHref="images/newsletter-icon.svg#Group 22"></use>
-                                </svg>
+                                <img className="newsletter-icon" src={newsLetterIcon} alt="Arrow button for newsletter"/>
                             </Link>
                         </div>
                     </div>
