@@ -33,26 +33,32 @@
     --clr-neutral-200: #F7F3ED;
     --clr-neutral-900: black;
     
-    --fs-heading: 6.25rem;
-    --fs-subheading: 2rem;
-    --fs-paras: 1rem;
-    --fs-footer-heading: 2.5rem;
-    --fs-newsletter-cta: 2.1875rem;
-
-    --ff-primary: 'League Spartan', sans-serif;
-    --ff-secondary: 'Noi Grotesk Trial', sans-serif;
-
     --size-50: 0.5rem;
     --size-100: 1rem;
     --size-180: 1.875rem;
     --size-200: 2rem;
     --size-250: 2.5rem;
+    --size-218: 2.1875rem;
     --size-300: 3rem;
     --size-400: 4rem;
     --size-500: 5rem;
     --size-600: 6rem;  
+    --size-750: 7.5rem;  
     --size-900: 9rem;
     --size-1250: 12.5rem;
+    --size-1425: 14.25rem;  
+
+
+    --fs-header-nav: 1.25rem;
+    --fs-heading: 6.25rem;
+    --fs-subheading: 2rem;
+    --fs-paras: 1rem;
+    --fs-footer-heading: 2.5rem;
+    --fs-newsletter-cta: 2.1875rem; 
+
+
+    --ff-primary: 'League Spartan', sans-serif;
+    --ff-secondary: 'Noi Grotesk Trial', sans-serif;
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset 
@@ -125,15 +131,25 @@ svg {
 
 /* Start of CSS Design */
 
-/*  */
+a{
+  text-decoration: none;
+  color: black;
+}
+
+body{
+  background-color: var(--clr-neutral-200);
+}
+
 
 /* Header Styles */
 .primary-header{
   padding-top: var(--size-200);
+  font-size: var(--fs-header-nav);
+
 }
 
 .container {
-  --max-width: 1110px;
+  --max-width: 1920px;
   --padding: 1rem;
 
   width: min(var(--max-width), 100% - (var(--padding) * 2));
@@ -151,13 +167,8 @@ svg {
     gap: clamp(var(--size-100), 5vw, var(--size-300));
 }
 
-.nav-list > * {
-  text-decoration: none;
-  color: black;
-}
-
 .header-logo{
-  height: var(--size-300);
+  height: var(--size-600);
 }
 
 .nav-wrapper > a{
@@ -172,15 +183,16 @@ svg {
 /* Footer Styles */
 
 .footer-logo{
-  height: var(--size-600);
+  height: var(--size-1425);
 }
 
 .footer{
   border-top: 1px solid black;
+  font-family: var(--ff-primary);
 }
 
 .newsletter-icon{
-  width: var(--size-400);
+  min-width: var(--size-400);
   height: auto;
 }
 
@@ -193,30 +205,37 @@ svg {
 
 .first-section > p{
   font-size: var(--size-180);
-}
-
-a{
-  text-decoration: none;
-  color: black;
-}
-
-.footer-wrapper{
-  display: flex; 
-  justify-content: center;
-  gap: clamp(var(--size-250), 5vh, var(--size-1250));
-}
-
-.second-section{
-  display: flex;
-  gap: clamp(var(--size-250), 5vh, var(--size-300));
-}
-
-.first-section > p{
+  font-weight: 300;
   padding-bottom: var(--size-900);
 }
 
+
+.footer-wrapper{
+  display: flex;
+  justify-content: center; 
+  gap: clamp(var(--size-250), 7vh, var(--size-1250));
+}
+
 .fs-newsletter{
+  font-family: var(--ff-secondary);
   font-size: var(--fs-newsletter-cta);
+}
+
+/* Footer Styles - Second Section */
+
+.second-section{
+  display: flex;
+  padding-top: 50px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: clamp(var(--size-250), 5vh, var(--size-750));
+  font-size: var(--fs-newsletter-cta);
+}
+
+.second-section h3{
+  padding-bottom: var(--size-250);
+  font-size: var(--fs-footer-heading);
+  font-weight: 500;
 }
 
 /* Utility Classes */
