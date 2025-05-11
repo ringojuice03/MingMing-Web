@@ -204,6 +204,10 @@ body{
 
 /* Main - Hero Styles */
 
+main .container{
+  padding: 0px var(--size-400);
+}
+
 .hero-wrapper{
   display: flex;
   gap: var(--size-500);
@@ -232,7 +236,7 @@ body{
 
 .shop-now-wrapper{
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
 }
