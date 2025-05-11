@@ -45,6 +45,7 @@
     --size-600: 6rem;  
     --size-750: 7.5rem;  
     --size-900: 9rem;
+    --size-1000: 10rem;
     --size-1250: 12.5rem;
     --size-1425: 14.25rem;  
 
@@ -231,7 +232,7 @@ body{
 
 .second-section{
   display: flex;
-  padding-top: 50px;
+  padding-top: var(--size-1000);
   align-items: flex-start;
   justify-content: flex-start;
   gap: clamp(var(--size-250), 5vh, var(--size-750));
