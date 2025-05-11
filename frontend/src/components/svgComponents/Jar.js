@@ -1,0 +1,10 @@
+export const Jar = () => {
+    return (
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.33301 50H91.6663" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M83.3337 50V83.3333C83.3337 85.5435 82.4557 87.6631 80.8929 89.2259C79.3301 90.7887 77.2105 91.6667 75.0003 91.6667H25.0003C22.7902 91.6667 20.6706 90.7887 19.1078 89.2259C17.545 87.6631 16.667 85.5435 16.667 83.3333V50" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.667 33.3337L83.3337 16.667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M36.9168 28.2499L35.0418 20.7083C34.7731 19.6467 34.7163 18.5427 34.8746 17.4592C35.0329 16.3757 35.4032 15.334 35.9643 14.3937C36.5254 13.4534 37.2663 12.6328 38.1447 11.979C39.0231 11.3252 40.0217 10.8509 41.0835 10.5833L49.1668 8.58327C50.2311 8.31529 51.3379 8.2602 52.4236 8.42116C53.5093 8.58212 54.5525 8.95596 55.4933 9.52121C56.4341 10.0865 57.2539 10.832 57.9058 11.715C58.5577 12.598 59.0287 13.6011 59.2918 14.6666L61.1668 22.1666" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    );
+}
