@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Noi Grotesk Trial';
+  src: url('fonts/NoiGroteskTrial-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noi Grotesk Trial';
+  src: url('fonts/NoiGroteskTrial-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Noi Grotesk Trial';
+  src: url('fonts/NoiGroteskTrial-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noi Grotesk Trial';
+  src: url('fonts/NoiGroteskTrial-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root{
     --clr-primary-700: #285141;
     --clr-primary-600: #85420E;
@@ -9,9 +37,14 @@
     --fs-subheading: 2rem;
     --fs-paras: 1rem;
     --fs-footer-heading: 2.5rem;
+    --fs-newsletter-cta: 2.1875rem;
+
+    --ff-primary: 'League Spartan', sans-serif;
+    --ff-secondary: 'Noi Grotesk Trial', sans-serif;
 
     --size-50: 0.5rem;
     --size-100: 1rem;
+    --size-180: 1.875rem;
     --size-200: 2rem;
     --size-250: 2.5rem;
     --size-300: 3rem;
@@ -148,7 +181,7 @@ svg {
 
 .newsletter-icon{
   width: var(--size-400);
-  aspect-ratio: 1;
+  height: auto;
 }
 
 .cta-newsletter{
@@ -156,6 +189,10 @@ svg {
   align-items: center;
   justify-content: flex-start;
   gap: clamp(var(--size-250), 5vh, var(--size-300));
+}
+
+.first-section > p{
+  font-size: var(--size-180);
 }
 
 a{
@@ -176,6 +213,10 @@ a{
 
 .first-section > p{
   padding-bottom: var(--size-900);
+}
+
+.fs-newsletter{
+  font-size: var(--fs-newsletter-cta);
 }
 
 /* Utility Classes */
