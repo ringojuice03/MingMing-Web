@@ -1,7 +1,9 @@
 export const Carousel = () => {
     return (
         <section>
-            temp
+            <div className="container">
+                *insert carousel here kane*
+            </div>
         </section>
     );
 }
