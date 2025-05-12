@@ -1,0 +1,95 @@
+/* Cookies.css */
+
+/* Main container for the entire page layout */
+.main-content {
+  display: flex; /* Creates a flex container for left pane and cookie grid */
+  min-height: 100vh; /* Ensures the main content takes at least the full viewport height */
+  background-color: #f8f5ed; /* Light, off-white/cream background as seen in the image */
+  padding: 20px; /* Overall padding around the content */
+  gap: 30px; /* Space between the left pane and the cookie grid */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+/* Styles for the left sidebar pane */
+.left-pane {
+  flex-shrink: 0; /* Prevent the left pane from shrinking */
+  width: 250px; /* Fixed width for the left pane */
+  padding: 20px; /* Padding inside the left pane */
+  /* Background color is inherited from main-content or can be explicitly set to match */
+  display: flex; /* Add this line */
+  flex-direction: column; /* Add this line */
+}
+
+/* Search input field styling */
+.left-pane form input[type="text"] {
+  width: 100%; /* Full width of its container */
+  padding: 12px 15px;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 20px; /* Rounded corners for the input field */
+  font-size: 16px;
+  outline: none; /* Remove default outline on focus */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  margin-bottom: 30px; /* Space below the search input */
+}
+
+.left-pane form input[type="text"]::placeholder {
+  color: #999; /* Color for placeholder text */
+}
+
+/* Categories section styling */
+.categories {
+  margin-top: 20px; /* Space above categories section */
+}
+
+.categories h3 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px; /* Space below the "Categories" heading */
+}
+
+/* Styling for individual category buttons */
+.categories .category {
+  display: block; /* Makes each button take full width and stack vertically */
+  width: 100%;
+  text-align: left; /* Align text to the left */
+  background: none; /* No background color */
+  border: none; /* No border */
+  padding: 10px 0; /* Vertical padding */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #555; /* Default text color */
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+}
+
+.categories .category:hover {
+  color: #000; /* Darken text on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Styling for the "All Cookies" button, assuming it's the active/selected category */
+.categories .category.active{ /* Or use a dedicated class like .category.active */
+  color: #000; /* Darker text color */
+  font-weight: bold; /* Bolder text */
+  /* text-decoration: underline; Remove if you prefer no underline on active */
+}
+
+
+/* Styles for the main cookie display grid */
+.cookie-grid {
+  flex-grow: 1; /* Allows the grid to take up the remaining space */
+  display: grid;
+  /* Set to exactly 4 columns, each taking an equal fraction of the available space */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; /* Space between cookie cards */
+  padding: 20px 10px; /* Add some top/bottom padding to the grid */
+}
+
+/* Ensure CookieCard component styles are also applied.
+    You would typically import the CookieCard.css into your project or combine them.
+    Example import in your main App.js or index.js:
+    import './CookieCard.css';
+    import './Cookies.css';
+*/
