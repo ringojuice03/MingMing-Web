@@ -8,12 +8,12 @@ export const Footer = () => {
             <div className="container">
                 <div className="footer-wrapper">
                     <div className="first-section">
-                        <Link to="/" aria-label="Home"><img className="footer-logo" src={logo}/></Link>
+                        <Link to="/" aria-label="Home"><img className="footer-logo" src={logo} alt="Mingming Logo"/></Link>
                         <p>Baked to Perfection, Crafted for Delight</p>
                         <div aria-label="newsletter">
                             <Link to="/" className="cta-footer-newsletter | fs-newsletter">
                                 <p>Get our newsletter</p>
-                                <NewsLetterIcon />
+                                <NewsLetterIcon className="icons"/>
                             </Link>
                         </div>
                     </div>
@@ -21,7 +21,7 @@ export const Footer = () => {
                         <div>
                             <h3>Navigation</h3>
                             <nav>
-                                <ul role="list">
+                                <ul>
                                     <Link to="/"><li>Home</li></Link>
                                     <Link to="/cookies"><li>Cookies</li></Link>
                                     <Link to="/"><li>Cart</li></Link>
@@ -31,7 +31,7 @@ export const Footer = () => {
                         </div>
                         <div>
                             <h3>Contacts</h3>
-                            <ul role="list">
+                            <ul>
                                 <li>mingming@gmail.com</li>
                                 <li>+63-9692499027</li>
                                 <li>Carolina, Naga City.</li>
@@ -40,12 +40,10 @@ export const Footer = () => {
                         <div>
                             <h3>Social Media</h3>
                             <nav className="footer-nav-socials">
-                                <ul role="list">
-                                    <li>
-                                        <Link to="/"><li>Instagram</li></Link>
-                                        <Link to="/"><li>Facebook</li></Link>
-                                        <Link to="/"><li>Twitter</li></Link>
-                                    </li>
+                                <ul>
+                                    <Link to="/"><li>Instagram</li></Link>
+                                    <Link to="/"><li>Facebook</li></Link>
+                                    <Link to="/"><li>Twitter</li></Link>
                                 </ul>
                             </nav>
                         </div>
