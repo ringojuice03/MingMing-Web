@@ -1,123 +1,140 @@
 /* CookieCard.css */
 
 .cookie-card {
- /* Removed background-color: #fff; */
- /* Removed box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
- border-radius: 10px; /* Subtle rounded corners, still applies to the overall shape */
- overflow: hidden; /* Ensures image corners are rounded with the card */
- width: 300px; /* Example fixed width, adjust as needed for grid fit */
- /* margin: 20px; - Handled by cookie-grid gap */
- display: flex;
- flex-direction: column;
- /* The overall card now blends with the main content background */
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  transition: transform var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease;
+}
+
+.cookie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .cookie-poster {
   width: 100%;
-  /* Removed: height: 0; */
-  /* Removed: padding-bottom: 100%; */
-  position: relative; /* Keep this if you plan to absolutely position other elements within the poster area in the future */
+  position: relative;
+  padding-bottom: 100%; 
+  overflow: hidden;
+  background-color: white;
+  border-radius: 8px 8px 0 0; 
 }
 
-.cookie-poster .image {
-  /* Removed: position: absolute; */
-  /* Removed: top: 0; */
-  /* Removed: left: 0; */
-  width: 100%; /* Ensures the image scales down to fit the width of its container */
-  height: auto; /* Allows the image's height to adjust proportionally, preserving its aspect ratio */
-  /* Removed: object-fit: cover; (no longer needed as height is auto) */
-  border-top-left-radius: 10px; /* Matches card radius */
-  border-top-right-radius: 10px; /* Matches card radius */
+.cookie-poster img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity var(--transition-speed) ease;
+}
+
+.cookie-poster .normal-image {
+  opacity: 1;
+}
+
+.cookie-poster .hover-image {
+  opacity: 0;
+}
+
+.cookie-card:hover .normal-image {
+  opacity: 0;
+}
+
+.cookie-card:hover .hover-image {
+  opacity: 1;
 }
 
 .bottom-info {
- display: flex;
- flex-direction: column;
- justify-content: space-between; /* This helps push elements to the top and bottom */
- flex-grow: 1; /* Allows the bottom info to take up available vertical space */
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+  flex-grow: 1; 
 }
 
 .cookie-details {
- padding: 15px;
- text-align: left;
- /* background-color: #fff; Add white background to the details section */
- /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); Subtle shadow for this section */
- /* flex-grow: 1; Removed from here, applied to bottom-info */
- display: flex; /* Use flex for its internal alignment */
- flex-direction: column; /* Stack name and price */
- justify-content: space-between; /* Distribute space between name and price */
- margin-bottom: 10px; /* Add some space before the options */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .cookie-details .name {
- font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
- font-size: 20px;
- font-weight: bold;
- color: #333;
- margin-bottom: 5px; /* Reduced margin slightly */
- /* No margin-top to allow names to naturally align */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--secondary-color);
+  margin: 0;
 }
 
 .cookie-details .price {
- font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
- font-size: 16px;
- color: #666;
- font-weight: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #b45309;
+  font-weight: 500;
+  margin: 0;
 }
 
 .cookie-options {
- padding: 15px;
- /* padding-top: 0; - Remove this as we'll set padding on details */
- /* background-color: #fff; Add white background to the options section as well */
- border-bottom-left-radius: 10px; /* Matches card radius */
- border-bottom-right-radius: 10px; /* Matches card radius */
- padding-top: 0; /* Ensure button sits closer to price */
- padding-bottom: 15px; /* Padding for the bottom of the card */
+  width: 100%;
+  margin-top: auto; 
 }
 
-/* Styling for the "Select Options" button */
 .cookie-options h3 {
- font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
- font-size: 16px;
- font-weight: normal; /* Reset h3 default bold */
- text-align: center;
- background-color: #fff;
- border: 1px solid #ccc; /* Light gray border */
- border-radius: 5px; /* Slightly rounded button corners */
- padding: 12px 20px;
- cursor: pointer; /* Indicates it's clickable */
- color: #333;
- transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
- width: 100%; /* Make the button span full width of its container */
- box-sizing: border-box; /* Include padding and border in the element's total width */
- box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow to the button */
+  width: 100%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal; 
+  text-align: center;
+  background-color: white; 
+
+  border: 1px solid #d1d5db; 
+  border-radius: 4px; 
+
+  padding: 12px 16px;
+  cursor: pointer;
+  color: #374151; 
+  transition: all var(--transition-speed) ease;
+  margin: 0;
+  box-sizing: border-box; 
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .cookie-options h3:hover {
- background-color: #f9f9f9; /* Subtle hover effect */
- border-color: #bbb;
+  background-color: #f9fafb; 
+  border-color: #c1c5ca; 
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); 
 }
 
 /* If you were to use a button element, you would style it like this: */
 /*
 .cookie-options button {
- font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
- font-size: 16px;
- font-weight: normal;
- text-align: center;
- background-color: #fff;
- border: 1px solid #ccc;
- border-radius: 5px;
- padding: 12px 20px;
- width: 100%; // Make the button span full width
- cursor: pointer;
- color: #333;
- transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
- box-sizing: border-box; // Important for full width buttons
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 12px 20px;
+  width: 100%; // Make the button span full width
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  box-sizing: border-box; // Important for full width buttons
 }
 
 .cookie-options button:hover {
- background-color: #f9f9f9;
- border-color: #bbb;
+  background-color: #f9f9f9;
+  border-color: #bbb;
 }
-*/ 
+*/

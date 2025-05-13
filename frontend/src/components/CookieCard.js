@@ -7,7 +7,12 @@ function CookieCard({ cookie }) {
         <img
           src={`${process.env.PUBLIC_URL}/${cookie.image_url}`}
           alt={cookie.name}
-          className="image"
+          className="normal-image"
+        />
+        <img
+          src={`${process.env.PUBLIC_URL}/${cookie.image_url_hover}`}
+          alt={`${cookie.name} hover`}
+          className="hover-image"
         />
       </div>
 

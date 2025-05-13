@@ -1,95 +1,248 @@
 /* Cookies.css */
 
+:root {
+  --primary-color: #f8f5ed;
+  --secondary-color: #333;
+  --accent-color: #e67e22;
+  --border-color: #ddd;
+  --hover-color: #f39c12;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+  --side-padding: clamp(20px, 5vw, 40px);
+  --card-width: 280px;
+}
+
 /* Main container for the entire page layout */
 .main-content {
-  display: flex; /* Creates a flex container for left pane and cookie grid */
-  min-height: 100vh; /* Ensures the main content takes at least the full viewport height */
-  background-color: #f8f5ed; /* Light, off-white/cream background as seen in the image */
-  padding: 20px; /* Overall padding around the content */
-  gap: 30px; /* Space between the left pane and the cookie grid */
-  box-sizing: border-box; /* Include padding in the element's total width and height */
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  padding: var(--side-padding);
+  gap: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 /* Styles for the left sidebar pane */
 .left-pane {
-  flex-shrink: 0; /* Prevent the left pane from shrinking */
-  width: 250px; /* Fixed width for the left pane */
-  padding: 20px; /* Padding inside the left pane */
-  /* Background color is inherited from main-content or can be explicitly set to match */
-  display: flex; /* Add this line */
-  flex-direction: column; /* Add this line */
+  width: 250px;
+  flex-shrink: 0;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
 }
 
 /* Search input field styling */
-.left-pane form input[type="text"] {
-  width: 100%; /* Full width of its container */
+.search-input {
+  width: 100%;
   padding: 12px 15px;
-  border: 1px solid #ddd; /* Light gray border */
-  border-radius: 20px; /* Rounded corners for the input field */
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
   font-size: 16px;
-  outline: none; /* Remove default outline on focus */
-  box-sizing: border-box; /* Include padding and border in the element's total width */
-  margin-bottom: 30px; /* Space below the search input */
+  outline: none;
+  box-sizing: border-box;
+  transition: all var(--transition-speed) ease;
+  background-color: #f8f9fa;
 }
 
-.left-pane form input[type="text"]::placeholder {
-  color: #999; /* Color for placeholder text */
+.search-input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+  background-color: white;
+}
+
+.search-input::placeholder {
+  color: #999;
 }
 
 /* Categories section styling */
 .categories {
-  margin-top: 20px; /* Space above categories section */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .categories h3 {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 15px; /* Space below the "Categories" heading */
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.categories h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 /* Styling for individual category buttons */
 .categories .category {
-  display: block; /* Makes each button take full width and stack vertically */
+  display: block;
   width: 100%;
-  text-align: left; /* Align text to the left */
-  background: none; /* No background color */
-  border: none; /* No border */
-  padding: 10px 0; /* Vertical padding */
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 12px 15px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #555; /* Default text color */
+  color: var(--secondary-color);
   cursor: pointer;
-  transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+  border-radius: 8px;
+  transition: all var(--transition-speed) ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .categories .category:hover {
-  color: #000; /* Darken text on hover */
-  text-decoration: underline; /* Underline on hover */
+  background-color: rgba(230, 126, 34, 0.1);
+  color: var(--accent-color);
+  padding-left: 20px;
 }
 
-/* Styling for the "All Cookies" button, assuming it's the active/selected category */
-.categories .category.active{ /* Or use a dedicated class like .category.active */
-  color: #000; /* Darker text color */
-  font-weight: bold; /* Bolder text */
-  /* text-decoration: underline; Remove if you prefer no underline on active */
+.categories .category.active {
+  color: white;
+  background-color: var(--accent-color);
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(230, 126, 34, 0.2);
 }
-
 
 /* Styles for the main cookie display grid */
 .cookie-grid {
-  flex-grow: 1; /* Allows the grid to take up the remaining space */
+  flex: 1;
   display: grid;
-  /* Set to exactly 4 columns, each taking an equal fraction of the available space */
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 20px; /* Space between cookie cards */
-  padding: 20px 10px; /* Add some top/bottom padding to the grid */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  align-content: start;
+  padding: 0 16px;
+}
+
+/* Cookie card hover effects */
+.cookie-grid .cookie-card {
+  transition: transform var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease;
+}
+
+.cookie-grid .cookie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+.cookie-grid .cookie-card img {
+  transition: opacity var(--transition-speed) ease;
+}
+
+.cookie-grid .cookie-card:hover img.normal-image {
+  opacity: 0;
+}
+
+.cookie-grid .cookie-card:hover img.hover-image {
+  opacity: 1;
+}
+
+/* Animation for cookie cards */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cookie-grid > * {
+  animation: fadeInScale 0.4s ease-out;
+  will-change: transform, opacity;
+}
+
+/* Stagger the animations for each card */
+.cookie-grid > *:nth-child(1) { animation-delay: 0s; }
+.cookie-grid > *:nth-child(2) { animation-delay: 0.05s; }
+.cookie-grid > *:nth-child(3) { animation-delay: 0.1s; }
+.cookie-grid > *:nth-child(4) { animation-delay: 0.15s; }
+.cookie-grid > *:nth-child(5) { animation-delay: 0.2s; }
+.cookie-grid > *:nth-child(6) { animation-delay: 0.25s; }
+.cookie-grid > *:nth-child(7) { animation-delay: 0.3s; }
+.cookie-grid > *:nth-child(8) { animation-delay: 0.35s; }
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .cookie-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1100px) {
+  .cookie-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .left-pane {
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+
+  .cookie-grid {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --side-padding: 15px;
+  }
+  
+  .main-content {
+    padding: var(--side-padding);
+    gap: 20px;
+  }
+  
+  .cookie-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Animation for cards appearing */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Ensure CookieCard component styles are also applied.
-    You would typically import the CookieCard.css into your project or combine them.
-    Example import in your main App.js or index.js:
-    import './CookieCard.css';
-    import './Cookies.css';
+   You would typically import the CookieCard.css into your project or combine them.
+   Example import in your main App.js or index.js:
+   import './CookieCard.css';
+   import './Cookies.css';
 */
