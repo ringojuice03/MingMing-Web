@@ -5,7 +5,7 @@ import { CookieArt } from "./svgComponents/CookieArt.js";
 import { Jar } from "./svgComponents/Jar.js";
 import { Gift } from "./svgComponents/Gift.js";
 import { ImageTransition } from "./ImageTransition.js";
-import { HeroDivider } from "./svgComponents/HeroDivider.js";
+import tomCruise from "../images/tomCruise.png";
 
  
 export const Home = () => {
@@ -110,28 +110,28 @@ export const Home = () => {
             <section className="padding-block-500">
                 <div className="container">
                     <div className="review-wrapper">
-                        <h2>Tasty and Unbeatable!</h2>
-                        <div>
+                        <h2 className="heading-big-libre-baskerville clr-primary-600">Tasty and <br/>Unbeatable!</h2>
+                        <div className="inner-review-wrapper">
                             <div>
-                                <p>Tom Cruise, mingming enjoyer</p>
-                                <p>"Ming Ming Cookies are pure magic! Every bite is a d
-                                    elightful dance of crisp edges, chewy centers, and rich, 
+                                <div class="user-review-wrapper">
+                                    <img src={tomCruise} alt="Profile"/>
+                                    <p>Tom Cruise, MinMing Enjoyer</p>
+                                </div>
+                                <p className="review-description">"MingMing Cookies are pure magic! Every bite is a delightful dance of crisp edges, chewy centers, and rich, 
                                     comforting flavors. It’s the kind of treat that makes you 
                                     pause, close your eyes, and savor the moment. Absolutely irresistible!"</p>
                             </div>
-                            <img src="" alt="" />
+                            <Link to="/" className="review-img"><ImageTransition defSource={cookieNormalSources[4]} hovSource={cookieNormalSources[5]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <Carousel />
-
             <section>
                 <div className="container">
                     <div ></div>
-                    <h2 className="heading-big-league-spartan">Stay Connected with Us<br/>
-                    <span className="heading-big-libre-baskerville text-align-right">@mingming.co</span></h2>
+                    <h2 className="heading-big-league-spartan clr-primary-600">Stay Connected with Us<br/>
+                    <span className="cta-company-text heading-big-libre-baskerville text-align-right">@mingming.co</span></h2>
                     <p>Whether you're planning a special event, indulging in a personal treat, 
                         or gifting a loved one, we’ve got the perfect bite for you.</p>
                     <div>

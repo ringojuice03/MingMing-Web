@@ -61,11 +61,13 @@
     --fs-header-nav: 1.25rem;
     --fs-heading: 6.25rem;
     --fs-description-heading: 2.5rem;
-    --fs-price: 2.5rem;
+
     --fs-cookie-title: 1.5rem;
     --fs-subheading: 2rem;
     --fs-paras: 1rem;
     --fs-footer-heading: 2.5rem;
+    --fs-price: 2.5rem;
+    --fs-review-description: 2.5rem;
     --fs-newsletter-cta: 2.1875rem; 
     --fs-tertiary-headings: 3rem;
 
@@ -155,6 +157,22 @@ a{
 
 body{
   background-color: var(--clr-neutral-200);
+}
+
+/* Image Transition css */
+
+.image-wrapper{
+  position: relative;
+}
+
+.image-wrapper.img-long{
+  height: var(--img-height-long);
+  width: var(--img-width-long);
+}
+
+.image-wrapper.img-normal{
+  height: var(--img-height-normal);
+  width: var(--img-width-normal);;
 }
 
 /* Header Styles */
@@ -304,6 +322,36 @@ main .container{
   font-size: var(--fs-price);
 }
 
+/* Main - Review Section */
+.review-wrapper h2{
+  text-align: center;
+}
+
+.inner-review-wrapper{
+  padding-top: var(--size-400);
+  display: flex;
+  justify-content: center;
+  gap: clamp(var(--size-100), 100vw, var(--size-900));
+  font-family: var(--ff-secondary);
+}
+
+.user-review-wrapper{
+  display: flex;
+  align-items: flex-end;
+  gap: var(--size-180);
+  font-size: var(--fs-tertiary-headings);
+}
+
+.review-description{
+  font-size: var(--fs-review-description);
+  max-width: 39ch;
+  padding-top: 2rem;
+}
+
+.review-img .image-wrapper{
+  height: 100%;
+}
+
 /* Footer Styles */
 
 .footer-logo{
@@ -357,28 +405,13 @@ main .container{
   font-weight: 500;
 }
 
-/* Image Transition css */
-
-.image-wrapper{
-  position: relative;
-}
-
-.image-wrapper.img-long{
-  height: var(--img-height-long);
-  width: var(--img-width-long);
-}
-
-.image-wrapper.img-normal{
-  height: var(--img-height-normal);
-  width: var(--img-width-normal);;
-}
-
 
 .defSource,
 .hovSource{
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   height: 100%;
   width: 100%;
   transition: opacity 0.3s ease-in-out;
@@ -404,7 +437,7 @@ main .container{
 /* Utility Classes */
 
 .padding-block-100{
-  padding-block: var(--size-100);
+  padding-block: 5rem;
 }
 
 .padding-block-300{
@@ -437,6 +470,10 @@ main .container{
 
 .clr-primary-700{
   color: var(--clr-primary-700);
+}
+
+.clr-primary-600{
+  color: var(--clr-primary-600);
 }
 
 .item-wrapper{
