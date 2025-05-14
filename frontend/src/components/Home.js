@@ -5,6 +5,7 @@ import { CookieArt } from "./svgComponents/CookieArt.js";
 import { Jar } from "./svgComponents/Jar.js";
 import { Gift } from "./svgComponents/Gift.js";
 import { ImageTransition } from "./ImageTransition.js";
+import { HeroDivider } from "./svgComponents/HeroDivider.js";
 
  
 export const Home = () => {
@@ -18,11 +19,13 @@ export const Home = () => {
 
     return(
         <main>
-            <section>
+            <section className="padding-block-500">
                 <div className="container">
                     <div className="hero-wrapper">
                         <div className="hero-text">
-                            <h1>Baked to Perfection, Crafted for Delight</h1>
+                            <h1 className="heading-big">
+                                Baked to Perfection, <br/>Crafted for Delight
+                            </h1>
                             <p>Indulge in a world where cookies are more than 
                                 just a treat—they're an experience. Handcrafted 
                                 with love, baked to golden perfection, and presented 
@@ -30,70 +33,73 @@ export const Home = () => {
                                 both your cravings and your eyes.</p>
                             <Link to="/" className="shop-now-wrapper"> 
                                 <p>Shop Now</p>
-                                <NewsLetterIcon />
+                                <NewsLetterIcon className="icons"/>
                             </Link>
                         </div>
                         <div className="hero-images">
-                            <Link to="/"><ImageTransition defSource={cookieLongSources[2]} hovSource={cookieLongSources[3]} alt={"peanut-butter-chocolate-swirl-cookies"} isLong={true}/></Link>
-                            <Link to="/"><ImageTransition defSource={cookieLongSources[1]} hovSource={cookieLongSources[0]} alt={"double-chocolate-chip-cookies"} isLong={true}/></Link>
+                            <Link to="/" className="image-link-container"><ImageTransition defSource={cookieLongSources[2]} hovSource={cookieLongSources[3]} alt={"peanut-butter-chocolate-swirl-cookies"} isLong={true}/></Link>
+                            <Link to="/" className="image-link-container"><ImageTransition defSource={cookieLongSources[1]} hovSource={cookieLongSources[0]} alt={"double-chocolate-chip-cookies"} isLong={true}/></Link>
                         </div>
                     </div>
-                    <div>
+                    <div className="hero-description-wrapper">
                         <div>
-                            <CookieArt />
+                            <CookieArt className="icons"/>
                             <div>
                                 <h3>Artisan Creations</h3>
-                                <p>Each cookie is a masterpiece, thoughtfully designed for both beauty and taste.</p>
+                                <p className="hero-paras">Each cookie is a masterpiece, thoughtfully designed for both beauty and taste.</p>
                             </div>
                         </div>
-                        {/* Insert DIvider Here */}
+                        <div className="hero-divider"></div>
                         <div>
-                            <Jar />
+                            <Jar className="icons"/>
                             <div>
                                 <h3>Premium Ingredients</h3>
-                                <p>We use only the finest ingredients to bring out the best flavors in every bite.</p>
+                                <p className="hero-paras">We use the finest ingredients to bring out the best flavors in every bite.</p>
                             </div>
                         </div>
-                        {/* Insert DIvider Here */}
+                        <div className="hero-divider"></div>
                         <div>
-                            <Gift />
+                            <Gift className="icons"/>
                             <div>
                                 <h3>Beautifully Packaged</h3>
-                                <p>Delightfully packaged, perfect for sharing or treating yourself.</p>
+                                <p className="hero-paras">Delightfully packaged, perfect for sharing or treating yourself.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section>
+            <section className="padding-block-500">
                 <div className="container">
                     <div class="signature-wrapper">
-                        <div>
-                            <Link to="/"><ImageTransition defSource={cookieNormalSources[11]} hovSource={cookieNormalSources[10]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
-                            <p>Iced Oatmeal Cookie</p>
-                            <p>$99.50</p>
-                        </div>
-                        <div>
-                            <Link to="/"><ImageTransition defSource={cookieNormalSources[7]} hovSource={cookieNormalSources[6]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
-                            <p>Dark Chocolate Pecan Cookie</p>
-                            <p>$99.50</p>
-                        </div>
-                        <div>
-                            <Link to="/"><ImageTransition defSource={cookieNormalSources[3]} hovSource={cookieNormalSources[2]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
-                            <p>Apple Cinnamon Cookie</p>
-                            <p>$99.50</p>
-                        </div>
-                        <div>
-                            <Link to="/"><ImageTransition defSource={cookieNormalSources[13]} hovSource={cookieNormalSources[12]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
-                            <p>Peanut Butter Chocolate Swirl Cookies</p>
-                            <p>$99.50</p>
+                        <h2>Signature <span>Delights</span></h2>
+                        <div class="signature-images-wrapper">
+                            <div>
+                                <Link to="/"><ImageTransition defSource={cookieNormalSources[11]} hovSource={cookieNormalSources[10]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
+                                <p>Iced Oatmeal Cookie</p>
+                                <p>$99.50</p>
+                            </div>
+                            <div>
+                                <Link to="/"><ImageTransition defSource={cookieNormalSources[7]} hovSource={cookieNormalSources[6]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
+                                <p>Dark Chocolate Pecan Cookie</p>
+                                <p>$99.50</p>
+                            </div>
+                            <div>
+                                <Link to="/"><ImageTransition defSource={cookieNormalSources[3]} hovSource={cookieNormalSources[2]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
+                                <p>Apple Cinnamon Cookie</p>
+                                <p>$99.50</p>
+                            </div>
+                            <div>
+                                <Link to="/"><ImageTransition defSource={cookieNormalSources[13]} hovSource={cookieNormalSources[12]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
+                                <p>Peanut Butter Chocolate Swirl Cookies</p>
+                                <p>$99.50</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section>
+            <section className="padding-block-500">
                 <div className="container">
                     <div className="review-wrapper">
                         <h2>Tasty and Unbeatable!</h2>
@@ -122,7 +128,7 @@ export const Home = () => {
                     <div>
                         <Link> 
                             <p>Get our newsletter</p>
-                            <NewsLetterIcon />
+                            <NewsLetterIcon className="icons"/>
                         </Link>
                     </div>
                 </div>

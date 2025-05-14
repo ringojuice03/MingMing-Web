@@ -1,6 +1,6 @@
 export const Jar = () => {
     return (
-        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="icon-gap" idth="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.33301 50H91.6663" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M83.3337 50V83.3333C83.3337 85.5435 82.4557 87.6631 80.8929 89.2259C79.3301 90.7887 77.2105 91.6667 75.0003 91.6667H25.0003C22.7902 91.6667 20.6706 90.7887 19.1078 89.2259C17.545 87.6631 16.667 85.5435 16.667 83.3333V50" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M16.667 33.3337L83.3337 16.667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

@@ -42,7 +42,8 @@
     --size-300: 3rem;
     --size-400: 4rem;
     --size-500: 5rem;
-    --size-600: 6rem;  
+    --size-600: 6rem;
+    --size-625: 6.25rem;
     --size-750: 7.5rem;  
     --size-900: 9rem;
     --size-1000: 10rem;
@@ -59,14 +60,17 @@
 
     --fs-header-nav: 1.25rem;
     --fs-heading: 6.25rem;
+    --fs-description-heading: 2.5rem;
     --fs-subheading: 2rem;
     --fs-paras: 1rem;
     --fs-footer-heading: 2.5rem;
     --fs-newsletter-cta: 2.1875rem; 
+    --fs-tertiary-headings: 3rem;
 
 
     --ff-primary: 'League Spartan', sans-serif;
     --ff-secondary: 'Noi Grotesk Trial', sans-serif;
+    --ff-tertiary: 'Libre Baskerville', 'Noi Grotesk Trial';
 }
 
 /* https://piccalil.li/blog/a-modern-css-reset 
@@ -87,8 +91,8 @@
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -151,12 +155,6 @@ body{
   background-color: var(--clr-neutral-200);
 }
 
-.arrow-icon{
-  min-width: var(--size-400);
-  height: auto;
-}
-
-
 /* Header Styles */
 .primary-header{
   padding-top: var(--size-200);
@@ -213,12 +211,10 @@ main .container{
   gap: var(--size-500);
 }
 
-.hero-text h1{
-  font-size: var(--fs-heading);
-}
-
 .hero-text p{
   font-size: var(--fs-subheading);
+  font-family: var(--ff-secondary);
+  font-weight: 300;
 }
 
 .hero-text > p{
@@ -240,6 +236,47 @@ main .container{
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.hero-description-wrapper{
+  margin-top: var(--size-625);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(var(--size-50), var(--size-180), var(--size-200));
+}
+
+.hero-description-wrapper > div {
+  display: flex;
+  gap: var(--size-200);
+  align-items: center;
+}
+
+.hero-description-wrapper p{
+  font-size: var(--fs-subheading);
+  font-family: var(--ff-secondary);
+  font-weight: 300;
+}
+
+.hero-description-wrapper > div > :first-child {
+  align-self: flex-start;
+  flex-grow: 2;
+}
+
+.hero-description-wrapper h3{
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-description-heading);
+}
+
+.hero-divider{
+  background-color: black;
+  align-self: center;
+  width: 0.125rem;
+  height: 250px;
+}
+
+.hero-paras{
+  max-width: 30ch;
 }
 
 /* Footer Styles */
@@ -350,5 +387,15 @@ main .container{
 }
 
 .padding-block-500{
-  padding-block: var(--size-300);
+  padding-block: var(--size-500);
+}
+
+.icon-gap{
+  min-width: var(--size-400);
+}
+
+.heading-big{
+  font-size: var(--fs-heading);
+  font-family: var(--ff-primary);
+  line-height: var(--size-750);
 }
