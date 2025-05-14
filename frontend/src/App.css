@@ -61,6 +61,8 @@
     --fs-header-nav: 1.25rem;
     --fs-heading: 6.25rem;
     --fs-description-heading: 2.5rem;
+    --fs-price: 2.5rem;
+    --fs-cookie-title: 1.5rem;
     --fs-subheading: 2rem;
     --fs-paras: 1rem;
     --fs-footer-heading: 2.5rem;
@@ -287,6 +289,21 @@ main .container{
   padding-top: var(--size-400);
 }
 
+.signature-wrapper h2{
+  color: var(--clr-primary-600);
+}
+
+.cookie-title{
+ font-family: var(--ff-secondary);
+ font-size: var(--fs-cookie-title);
+ max-width: 20ch;
+}
+
+.cookie-price{
+  font-family: var(--ff-primary);
+  font-size: var(--fs-price);
+}
+
 /* Footer Styles */
 
 .footer-logo{
@@ -416,4 +433,15 @@ main .container{
 
 .text-align-right{
   text-align: right;
+}
+
+.clr-primary-700{
+  color: var(--clr-primary-700);
+}
+
+.item-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }

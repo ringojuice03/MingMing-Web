@@ -72,27 +72,35 @@ export const Home = () => {
             <section className="padding-block-500">
                 <div className="container">
                     <div class="signature-wrapper">
-                        <h2 className="heading-big-libre-baskerville">Signature <span>Delights</span></h2>
+                        <h2 className="heading-big-libre-baskerville">Signature <span className="clr-primary-700">Delights</span></h2>
                         <div class="signature-images-wrapper">
-                            <div>
-                                <Link to="/"><ImageTransition defSource={cookieNormalSources[11]} hovSource={cookieNormalSources[10]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
-                                <p>Iced Oatmeal Cookie</p>
-                                <p>$99.50</p>
+                            <div className="item-wrapper">
+                                <div>
+                                    <Link to="/"><ImageTransition defSource={cookieNormalSources[11]} hovSource={cookieNormalSources[10]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
+                                    <p className="cookie-title">Iced Oatmeal Cookie</p>
+                                </div>
+                                <p className="cookie-price">$99.50</p>
                             </div>
-                            <div>
-                                <Link to="/"><ImageTransition defSource={cookieNormalSources[7]} hovSource={cookieNormalSources[6]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
-                                <p>Dark Chocolate Pecan Cookie</p>
-                                <p>$99.50</p>
+                            <div className="item-wrapper">
+                                <div>
+                                    <Link to="/"><ImageTransition defSource={cookieNormalSources[7]} hovSource={cookieNormalSources[6]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
+                                    <p className="cookie-title">Dark Chocolate Pecan Cookie</p>
+                                </div>
+                                <p className="cookie-price">$99.50</p>
                             </div>
-                            <div>
-                                <Link to="/"><ImageTransition defSource={cookieNormalSources[3]} hovSource={cookieNormalSources[2]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
-                                <p>Apple Cinnamon Cookie</p>
-                                <p>$99.50</p>
+                            <div className="item-wrapper">
+                                <div>
+                                    <Link to="/"><ImageTransition defSource={cookieNormalSources[3]} hovSource={cookieNormalSources[2]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
+                                    <p className="cookie-title">Apple Cinnamon Cookie</p>
+                                </div>
+                                <p className="cookie-price">$99.50</p>
                             </div>
-                            <div>
-                                <Link to="/"><ImageTransition defSource={cookieNormalSources[13]} hovSource={cookieNormalSources[12]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
-                                <p>Peanut Butter Chocolate Swirl Cookies</p>
-                                <p>$99.50</p>
+                            <div className="item-wrapper">
+                                <div>
+                                    <Link to="/"><ImageTransition defSource={cookieNormalSources[13]} hovSource={cookieNormalSources[12]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
+                                    <p className="cookie-title">Peanut Butter Chocolate Swirl Cookies</p>
+                                </div>
+                                <p className="cookie-price">$99.50</p>
                             </div>
                         </div>
                     </div>
