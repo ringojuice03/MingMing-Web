@@ -23,7 +23,7 @@ export const Home = () => {
                 <div className="container">
                     <div className="hero-wrapper">
                         <div className="hero-text">
-                            <h1 className="heading-big">
+                            <h1 className="heading-big-league-spartan">
                                 Baked to Perfection, <br/>Crafted for Delight
                             </h1>
                             <p>Indulge in a world where cookies are more than 
@@ -72,7 +72,7 @@ export const Home = () => {
             <section className="padding-block-500">
                 <div className="container">
                     <div class="signature-wrapper">
-                        <h2>Signature <span>Delights</span></h2>
+                        <h2 className="heading-big-libre-baskerville">Signature <span>Delights</span></h2>
                         <div class="signature-images-wrapper">
                             <div>
                                 <Link to="/"><ImageTransition defSource={cookieNormalSources[11]} hovSource={cookieNormalSources[10]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
@@ -122,7 +122,8 @@ export const Home = () => {
             <section>
                 <div className="container">
                     <div ></div>
-                    <h2>Stay Connected with Us<span>@mingming.co</span></h2>
+                    <h2 className="heading-big-league-spartan">Stay Connected with Us<br/>
+                    <span className="heading-big-libre-baskerville text-align-right">@mingming.co</span></h2>
                     <p>Whether you're planning a special event, indulging in a personal treat, 
                         or gifting a loved one, we’ve got the perfect bite for you.</p>
                     <div>

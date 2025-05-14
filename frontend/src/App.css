@@ -394,8 +394,18 @@ main .container{
   min-width: var(--size-400);
 }
 
-.heading-big{
+.heading-big-league-spartan{
   font-size: var(--fs-heading);
   font-family: var(--ff-primary);
   line-height: var(--size-750);
+}
+
+.heading-big-libre-baskerville{
+  font-size: var(--fs-heading);
+  font-family: var(--ff-tertiary);
+  line-height: var(--size-750);
+}
+
+.text-align-right{
+  text-align: right;
 }
