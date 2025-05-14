@@ -48,14 +48,14 @@
     --size-900: 9rem;
     --size-1000: 10rem;
     --size-1250: 12.5rem;
-    --size-1425: 14.25rem;  
+    --size-1425: 14.25rem;
 
 
     --img-height-long: 38.5rem;
     --img-width-long: 25.6875rem;
 
-    --img-height-normal: 21.4375rem;
-    --img-width-normal: 18.9375rem;
+    --img-height-normal: 25.875rem;
+    --img-width-normal: 22.75rem;
 
 
     --fs-header-nav: 1.25rem;
@@ -279,6 +279,14 @@ main .container{
   max-width: 30ch;
 }
 
+/* Main - Signature Delights Section */
+.signature-images-wrapper{
+  display: flex;
+  justify-content: center;
+  gap: var(--size-100);
+  padding-top: var(--size-400);
+}
+
 /* Footer Styles */
 
 .footer-logo{
@@ -345,7 +353,7 @@ main .container{
 
 .image-wrapper.img-normal{
   height: var(--img-height-normal);
-  width: var(--img-width-normal);
+  width: var(--img-width-normal);;
 }
 
 
