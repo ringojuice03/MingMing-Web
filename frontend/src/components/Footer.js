@@ -11,7 +11,7 @@ export const Footer = () => {
                         <Link to="/" aria-label="Home"><img className="footer-logo" src={logo} alt="Mingming Logo"/></Link>
                         <p>Baked to Perfection, Crafted for Delight</p>
                         <div aria-label="newsletter">
-                            <Link to="/" className="cta-footer-newsletter | fs-newsletter">
+                            <Link to="/" className="cta-newsletter | fs-newsletter">
                                 <p>Get our newsletter</p>
                                 <NewsLetterIcon className="icons"/>
                             </Link>

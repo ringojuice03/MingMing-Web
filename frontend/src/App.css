@@ -363,7 +363,7 @@ main .container{
   font-family: var(--ff-primary);
 }
 
-.cta-footer-newsletter{
+.cta-newsletter{
   display: flex;
   align-items: center;
   justify-content: flex-start;

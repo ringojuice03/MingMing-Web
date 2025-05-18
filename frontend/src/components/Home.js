@@ -135,7 +135,7 @@ export const Home = () => {
                     <p>Whether you're planning a special event, indulging in a personal treat, 
                         or gifting a loved one, we’ve got the perfect bite for you.</p>
                     <div>
-                        <Link> 
+                        <Link className="cta-newsletter | fs-newsletter"> 
                             <p>Get our newsletter</p>
                             <NewsLetterIcon className="icons"/>
                         </Link>
