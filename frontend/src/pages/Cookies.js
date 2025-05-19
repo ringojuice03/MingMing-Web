@@ -17,6 +17,7 @@ function Cookies() {
   const [cookieList, setCookieList] = useState(cookies);
   const [category, setCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const [isNotFound, setIsNotFound] = useState(false);
 
   useEffect(() => {
     setCookieList(sortByCategory(category));
@@ -24,6 +25,21 @@ function Cookies() {
 
   const handleSearch = (e) => {
     e.preventDefault();
+    const categoryCookies = sortByCategory(category);
+
+    if (!searchQuery.trim()) {
+      setCookieList(categoryCookies);
+      setIsNotFound(false);
+      return;
+    }
+
+    console.log(categoryCookies);
+    const temp = categoryCookies.filter((cookie) =>
+      cookie.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    setCookieList(temp);
+    setIsNotFound(temp.length === 0 ? true : false);
   };
 
   return (
@@ -78,6 +94,12 @@ function Cookies() {
             <CookieCard cookie={cookie} key={cookie.id} />
           ))}
         </div>
+
+        {isNotFound && (
+          <div className="not-found">
+            Cookie not found. Try searching for other cookies.
+          </div>
+        )}
       </div>
 
       <CookieOption

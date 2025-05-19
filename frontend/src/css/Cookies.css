@@ -261,3 +261,22 @@ body, .main-content, .left-pane, .cookie-grid, .categories, .search-input, .cate
 .add-to-cart-overlay {
   z-index: 1002;
 }
+
+.not-found {
+  font-family: 'Noi Grotesk Trial', Arial, sans-serif;
+  color: #5a3a1b;
+  background: #f8f5ed;
+  font-size: 1.45rem;
+  font-weight: 600;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  height: 100%;
+  width: 100%;
+  padding-top: 50px;
+  padding-right: 280px;
+  padding-bottom: 50px;
+  padding-left: 180px;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
