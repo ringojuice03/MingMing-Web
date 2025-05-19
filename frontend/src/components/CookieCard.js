@@ -1,6 +1,14 @@
 import "../css/CookieCard.css";
+import { useCookieContext } from "../contexts/CookieContext";
 
 function CookieCard({ cookie }) {
+  const { setIsOptionClicked, setCookieOption } = useCookieContext();
+
+  const onOptionClick = () => {
+    setCookieOption(cookie);
+    setIsOptionClicked(true);
+  };
+
   return (
     <div className="cookie-card">
       <div className="cookie-poster">
@@ -22,9 +30,9 @@ function CookieCard({ cookie }) {
           <p className="price">${cookie.price}</p>
         </div>
 
-        <div className="cookie-options">
+        <button onClick={onOptionClick} className="cookie-options">
           <h3>Select Options</h3>
-        </div>
+        </button>
       </div>
     </div>
   );

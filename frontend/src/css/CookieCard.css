@@ -96,8 +96,8 @@
   text-align: center;
   background-color: white; 
 
-  border: 1px solid #d1d5db; 
-  border-radius: 4px; 
+  /* border: 1px solid #d1d5db; 
+  border-radius: 4px;  */
 
   padding: 12px 16px;
   cursor: pointer;
