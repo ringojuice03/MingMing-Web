@@ -26,6 +26,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Noi Grotesk Trial';
+  src: url('fonts/NoiGroteskTrial-Semibold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root{
     --clr-primary-700: #285141;
     --clr-primary-600: #85420E;
@@ -363,7 +370,7 @@ main .container{
   font-family: var(--ff-primary);
 }
 
-.cta-newsletter{
+.cta-newsletter, .see-more{
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -435,17 +442,18 @@ main .container{
 
 /* Carousel */
 
-.carousel_wrapper{
-  width: 90%;
+.carousel-wrapper{
+  padding-top: var(--size-400);
+  width: 100%;
 }
 
-.carousel_items{
+.carousel-items{
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-.carousel_wrapper[data-animated="true"]{
+.carousel-wrapper[data-animated="true"]{
   overflow: hidden;
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
   -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
@@ -457,12 +465,17 @@ main .container{
   }
 }
 
-.carousel_wrapper[data-animated="true"] .carousel_items{
+.carousel-wrapper[data-animated="true"] .carousel-items{
   width: max-content;
   flex-wrap: nowrap;
   animation: scroll 60s forwards linear infinite;
 }
 
+.carousel-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* Utility Classes */
 
@@ -511,4 +524,8 @@ main .container{
   flex-direction: column;
   justify-content: space-between;
 
+}
+
+.fw-semibold{
+  font-weight: 700;
 }
