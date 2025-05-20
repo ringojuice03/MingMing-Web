@@ -32,7 +32,7 @@ export const Home = () => {
                                 as edible works of art, our cookies are made to satisfy 
                                 both your cravings and your eyes.</p>
                             <div className="shop-now-wrapper">
-                                <Link to="/" className="cta-icon-area cta-hover">
+                                <Link to="/cookies" className="cta-icon-area cta-hover">
                                     <p>Shop Now</p>
                                     <NewsLetterIcon className="icons"/>
                                 </Link>
@@ -40,8 +40,8 @@ export const Home = () => {
                             
                         </div>
                         <div className="hero-images">
-                            <Link to="/" className="image-link-container"><ImageTransition defSource={cookieLongSources[2]} hovSource={cookieLongSources[3]} alt={"peanut-butter-chocolate-swirl-cookies"} isLong={true}/></Link>
-                            <Link to="/" className="image-link-container"><ImageTransition defSource={cookieLongSources[1]} hovSource={cookieLongSources[0]} alt={"double-chocolate-chip-cookies"} isLong={true}/></Link>
+                            <Link to="/cookies" className="image-link-container"><ImageTransition defSource={cookieLongSources[2]} hovSource={cookieLongSources[3]} alt={"peanut-butter-chocolate-swirl-cookies"} isLong={true}/></Link>
+                            <Link to="/cookies" className="image-link-container"><ImageTransition defSource={cookieLongSources[1]} hovSource={cookieLongSources[0]} alt={"double-chocolate-chip-cookies"} isLong={true}/></Link>
                         </div>
                     </div>
                     <div className="hero-description-wrapper">
@@ -79,28 +79,28 @@ export const Home = () => {
                         <div class="signature-images-wrapper">
                             <div className="item-wrapper">
                                 <div>
-                                    <Link to="/"><ImageTransition defSource={cookieNormalSources[11]} hovSource={cookieNormalSources[10]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
+                                    <Link to="/cookies"><ImageTransition defSource={cookieNormalSources[11]} hovSource={cookieNormalSources[10]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
                                     <p className="cookie-title">Iced Oatmeal Cookies</p>
                                 </div>
                                 <p className="cookie-price">$99.50</p>
                             </div>
                             <div className="item-wrapper">
                                 <div>
-                                    <Link to="/"><ImageTransition defSource={cookieNormalSources[7]} hovSource={cookieNormalSources[6]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
+                                    <Link to="/cookies"><ImageTransition defSource={cookieNormalSources[7]} hovSource={cookieNormalSources[6]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
                                     <p className="cookie-title">Dark Chocolate Pecan Cookies</p>
                                 </div>
                                 <p className="cookie-price">$99.50</p>
                             </div>
                             <div className="item-wrapper">
                                 <div>
-                                    <Link to="/"><ImageTransition defSource={cookieNormalSources[3]} hovSource={cookieNormalSources[2]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
+                                    <Link to="/cookies"><ImageTransition defSource={cookieNormalSources[3]} hovSource={cookieNormalSources[2]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
                                     <p className="cookie-title">Apple Cinnamon Cookies</p>
                                 </div>
                                 <p className="cookie-price">$99.50</p>
                             </div>
                             <div className="item-wrapper">
                                 <div>
-                                    <Link to="/"><ImageTransition defSource={cookieNormalSources[13]} hovSource={cookieNormalSources[12]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
+                                    <Link to="/cookies"><ImageTransition defSource={cookieNormalSources[13]} hovSource={cookieNormalSources[12]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
                                     <p className="cookie-title">Peanut Butter Chocolate Swirl Cookies</p>
                                 </div>
                                 <p className="cookie-price">$99.50</p>
@@ -124,7 +124,7 @@ export const Home = () => {
                                     comforting flavors. It’s the kind of treat that makes you 
                                     pause, close your eyes, and savor the moment. Absolutely irresistible!"</p>
                             </div>
-                            <Link to="/" className="review-img"><ImageTransition defSource={cookieNormalSources[4]} hovSource={cookieNormalSources[5]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
+                            <Link to="/cookies" className="review-img"><ImageTransition defSource={cookieNormalSources[4]} hovSource={cookieNormalSources[5]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
                         </div>
                     </div>
                 </div>

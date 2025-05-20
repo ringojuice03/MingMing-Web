@@ -11,7 +11,7 @@ export const Footer = () => {
                         <Link to="/" aria-label="Home"><img className="footer-logo" src={logo} alt="Mingming Logo"/></Link>
                         <p>Baked to Perfection, Crafted for Delight</p>
                         <div aria-label="newsletter">
-                            <Link to="/" className="cta-icon-area fs-newsletter cta-hover">
+                            <Link to="/cookies" className="cta-icon-area fs-newsletter cta-hover">
                                 <p>Get our newsletter</p>
                                 <NewsLetterIcon className="icons"/>
                             </Link>
@@ -41,9 +41,9 @@ export const Footer = () => {
                             <h3>Social Media</h3>
                             <nav className="footer-nav-socials">
                                 <ul>
-                                    <Link to="/"><li>Instagram</li></Link>
-                                    <Link to="/"><li>Facebook</li></Link>
-                                    <Link to="/"><li>Twitter</li></Link>
+                                    <Link to="/cookies"><li>Instagram</li></Link>
+                                    <Link to="/cookies"><li>Facebook</li></Link>
+                                    <Link to="/cookies"><li>Twitter</li></Link>
                                 </ul>
                             </nav>
                         </div>
