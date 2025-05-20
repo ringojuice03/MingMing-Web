@@ -1,16 +1,17 @@
 import { Link } from "react-router-dom";
 import { ImageTransition } from "./ImageTransition.js";
 import { useEffect } from "react";
+import { NewsLetterIcon } from "./svgComponents/NewsLetterIcon.js";
 
 export const Carousel = () => {
     const cookieNormalContext = require.context("../cookieNormal");
     const cookieNormalSources = cookieNormalContext.keys().map(cookieNormalContext);
 
     function addAnimation(){
-        const caroWrap = document.querySelector('.carousel_wrapper');
+        const caroWrap = document.querySelector('.carousel-wrapper');
         caroWrap.setAttribute("data-animated", true);
 
-        const caroItems = caroWrap.querySelector('.carousel_items');
+        const caroItems = caroWrap.querySelector('.carousel-items');
 
         const itemsContent = Array.from(caroItems.children);
 
@@ -31,8 +32,15 @@ export const Carousel = () => {
     return (
         <section className="padding-block-500">
             <div className="container">
-                <div className="carousel_wrapper">
-                    <ul className="carousel_items">
+                <div className="carousel-header">
+                    <h2 className="heading-big-libre-baskerville clr-primary-600">Cookie Gallery</h2>
+                    <Link to="/" className="see-more | fs-newsletter fw-semibold">
+                        <p>See More</p>
+                        <NewsLetterIcon className="icons"/>
+                    </Link>
+                </div>
+                <div className="carousel-wrapper">
+                    <ul className="carousel-items">
                         <li>
                             <div className="item-wrapper">
                                 <div>
