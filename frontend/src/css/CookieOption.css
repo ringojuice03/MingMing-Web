@@ -1,0 +1,226 @@
+.shade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.cookie-option {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  background: #f8f5f1;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(60, 40, 20, 0.12);
+  z-index: 1100;
+  width: 960px;
+  max-width: 95vw;
+  height: 510px;
+  overflow: hidden;
+  font-family: 'Noi Grotesk Trial', Arial, sans-serif;
+}
+
+.cookie-option img {
+  width: 372px;
+  height: 540px;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.cookie-option .exit-btn {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #f8f5f1;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 1200;
+}
+.cookie-option .exit-btn:hover {
+  background: #a06b36;
+}
+
+.cookie-option > *:not(img):not(.shade) {
+  flex: 1;
+  padding: 10px 40px 10px 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0 10px 10px 0;
+  background: #f8f5f1;
+}
+
+.cookie-name {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2d1c0b;
+  font-family: 'League Spartan', Arial, sans-serif;
+}
+
+.cookie-price {
+    margin-top: 15px;
+  font-size: 1.55rem;
+  color:#a06b36;
+  font-weight: 500;
+}
+
+.cookie-description {
+    margin-top: 25px;
+  margin-bottom: 25px;
+
+  color: #3d2b1f;
+  font-size: 1rem;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #6d4c1b;
+}
+
+.cookie-numbers {
+margin-top: 10px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.cookie-number {
+  border: 1.5px solid black;
+  background: #fff;
+  color: black;
+  border-radius: 8px;
+  padding: 8px 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.cookie-number:hover, .cookie-number:focus {
+  background: #8B4A13;
+  border: 1.5px solid #8B4A13;
+  color: #fff;
+}
+
+.cookie-number.selected {
+  background: #8B4A13; /* deep brown */
+  color: #fff;
+  border: none;
+}
+
+.quantity {
+    margin-top: 10px;
+}
+
+.quantity-section {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.counter-section {
+  display: flex;
+  border: 1px solid black;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 5px 10px;
+  gap: 10px;
+  height: 45px;
+}
+
+.counter-operation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  color: black;
+  font-size: 1rem;
+  width: 32px;
+  height: 32px;
+  border: 1px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+  padding-bottom: 4px;
+  font-size: 1.3rem;
+}
+.counter-operation:hover {
+  background: #e2d2c0;
+}
+
+.counter {
+  font-size: 1.3rem;
+  min-width: 24px;
+  text-align: center;
+  color: black;
+  padding-bottom: 3.5px;
+}
+
+.add-to-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  background: #8B4A13;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  height: 45px;
+  width: 230px;
+  margin-left: 18px;
+  box-shadow: 0 2px 8px rgba(60, 40, 20, 0.08);
+  transition: background 0.2s;
+}
+.add-to-cart:hover {
+  background: #6a320a;
+}
+
+@media (max-width: 900px) {
+  .cookie-option {
+    flex-direction: column;
+    width: 98vw;
+    min-width: 0;
+    max-width: 98vw;
+    height: auto;
+  }
+  .cookie-option img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+  }
+  .cookie-option > *:not(img):not(.shade) {
+    padding: 28px 18px 24px 18px;
+    border-radius: 0 0 10px 10px;
+  }
+  .cookie-option .exit-btn {
+    top: 14px;
+    right: 18px;
+  }
+}
