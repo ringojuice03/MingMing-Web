@@ -15,7 +15,7 @@ export const Home = () => {
     const cookieLongSources= cookieLongContext.keys().map(cookieLongContext);
     const cookieNormalSources = cookieNormalContext.keys().map(cookieNormalContext);
 
-    console.log(cookieNormalSources);
+    // console.log(cookieNormalSources);
 
     return(
         <main>
@@ -77,21 +77,21 @@ export const Home = () => {
                             <div className="item-wrapper">
                                 <div>
                                     <Link to="/"><ImageTransition defSource={cookieNormalSources[11]} hovSource={cookieNormalSources[10]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
-                                    <p className="cookie-title">Iced Oatmeal Cookie</p>
+                                    <p className="cookie-title">Iced Oatmeal Cookies</p>
                                 </div>
                                 <p className="cookie-price">$99.50</p>
                             </div>
                             <div className="item-wrapper">
                                 <div>
                                     <Link to="/"><ImageTransition defSource={cookieNormalSources[7]} hovSource={cookieNormalSources[6]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
-                                    <p className="cookie-title">Dark Chocolate Pecan Cookie</p>
+                                    <p className="cookie-title">Dark Chocolate Pecan Cookies</p>
                                 </div>
                                 <p className="cookie-price">$99.50</p>
                             </div>
                             <div className="item-wrapper">
                                 <div>
                                     <Link to="/"><ImageTransition defSource={cookieNormalSources[3]} hovSource={cookieNormalSources[2]} alt={"double-chocolate-chip-cookies"} isLong={false}/></Link>
-                                    <p className="cookie-title">Apple Cinnamon Cookie</p>
+                                    <p className="cookie-title">Apple Cinnamon Cookies</p>
                                 </div>
                                 <p className="cookie-price">$99.50</p>
                             </div>
@@ -126,6 +126,8 @@ export const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <Carousel />
 
             <section>
                 <div className="container">
