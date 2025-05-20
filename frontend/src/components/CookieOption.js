@@ -20,12 +20,12 @@ function CookieOption({ cookie, isOpen }) {
   };
 
   const onAddToCart = async () => {
-    setCounter(1);
     setIsCardOverlayOpen(true);
 
     setTimeout(() => {
       setIsOptionClicked(false);
       setIsCardOverlayOpen(false);
+      setCounter(1);
     }, 2000);
   };
 
