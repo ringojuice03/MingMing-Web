@@ -7,15 +7,17 @@ export const Carousel = () => {
     const cookieNormalSources = cookieNormalContext.keys().map(cookieNormalContext);
 
     function addAnimation(){
-        const items = document.querySelector('.carousel_items');
-        items.setAttribute("data-animated", true);
+        const caroWrap = document.querySelector('.carousel_wrapper');
+        caroWrap.setAttribute("data-animated", true);
 
-        const itemsContent = Array.from(items.children);
+        const caroItems = caroWrap.querySelector('.carousel_items');
+
+        const itemsContent = Array.from(caroItems.children);
 
         itemsContent.forEach((item) => {
             const duplicateItem = item.cloneNode(true);
             duplicateItem.setAttribute("aria-hidden", true);
-            items.appendChild(duplicateItem);
+            caroItems.appendChild(duplicateItem);
         });
     }
 
