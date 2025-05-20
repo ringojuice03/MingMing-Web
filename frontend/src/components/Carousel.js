@@ -34,7 +34,7 @@ export const Carousel = () => {
             <div className="container">
                 <div className="carousel-header">
                     <h2 className="heading-big-libre-baskerville clr-primary-600">Cookie Gallery</h2>
-                    <Link to="/" className="see-more | fs-newsletter fw-semibold">
+                    <Link to="/" className="see-more | fs-newsletter fw-semibold cta-hover">
                         <p>See More</p>
                         <NewsLetterIcon className="icons"/>
                     </Link>
