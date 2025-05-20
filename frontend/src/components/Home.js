@@ -31,10 +31,13 @@ export const Home = () => {
                                 with love, baked to golden perfection, and presented 
                                 as edible works of art, our cookies are made to satisfy 
                                 both your cravings and your eyes.</p>
-                            <Link to="/" className="shop-now-wrapper"> 
-                                <p>Shop Now</p>
-                                <NewsLetterIcon className="icons"/>
-                            </Link>
+                            <div className="shop-now-wrapper">
+                                <Link to="/" className="cta-icon-area cta-hover">
+                                    <p>Shop Now</p>
+                                    <NewsLetterIcon className="icons"/>
+                                </Link>
+                            </div>
+                            
                         </div>
                         <div className="hero-images">
                             <Link to="/" className="image-link-container"><ImageTransition defSource={cookieLongSources[2]} hovSource={cookieLongSources[3]} alt={"peanut-butter-chocolate-swirl-cookies"} isLong={true}/></Link>
@@ -127,20 +130,27 @@ export const Home = () => {
                 </div>
             </section>
 
-            <Carousel />
-
             <section>
+                <Carousel />
+            </section>
+
+            <section className="padding-block-500">
                 <div className="container">
-                    <div ></div>
-                    <h2 className="heading-big-league-spartan clr-primary-600">Stay Connected with Us<br/>
-                    <span className="cta-company-text heading-big-libre-baskerville text-align-right">@mingming.co</span></h2>
-                    <p>Whether you're planning a special event, indulging in a personal treat, 
-                        or gifting a loved one, we’ve got the perfect bite for you.</p>
-                    <div>
-                        <Link className="cta-newsletter | fs-newsletter"> 
-                            <p>Get our newsletter</p>
-                            <NewsLetterIcon className="icons"/>
-                        </Link>
+                    <div className="cta-wrapper">
+                        <div className="cta-content">
+                            <div>
+                                <h2 className="heading-big-league-spartan clr-primary-600">Stay Connected with Us</h2>
+                                <p className="heading-big-libre-baskerville clr-primary-600 text-align-right">@mingming.co</p>
+                            </div>
+                            <div className="cta-description">
+                                <p>Whether you're planning a special event, indulging in a personal treat, 
+                                    or gifting a loved one, we’ve got the perfect bite for you.</p>
+                                <Link className="cta-icon-area fs-newsletter fw-semibold cta-hover"> 
+                                    <p>Get our newsletter</p>
+                                    <NewsLetterIcon className="icons"/>
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
