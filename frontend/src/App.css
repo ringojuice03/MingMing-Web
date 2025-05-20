@@ -249,7 +249,7 @@ main .container{
 }
 
 :where(.hero-text>:not(:first-child)){
-  padding-top: var(--size-218);
+  margin-top: var(--size-218);
 }
 
 .hero-images{
@@ -261,8 +261,6 @@ main .container{
 .shop-now-wrapper{
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
 }
 
 .hero-description-wrapper{
@@ -370,17 +368,10 @@ main .container{
   font-family: var(--ff-primary);
 }
 
-.cta-newsletter, .see-more{
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: clamp(var(--size-250), 5vh, var(--size-300));
-}
-
 .first-section > p{
   font-size: var(--size-180);
   font-weight: 300;
-  padding-bottom: var(--size-900);
+  padding-bottom: var(--size-600);
 }
 
 
@@ -421,7 +412,7 @@ main .container{
   right: 0;
   height: 100%;
   width: 100%;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .defSource{
@@ -477,6 +468,24 @@ main .container{
   align-items: center;
 }
 
+/* Call-to-Action */
+
+.cta-content{
+  width: 80%;
+}
+
+.cta-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.cta-description {
+  padding-top: var(--size-300);
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-newsletter-cta);
+  max-width: 40ch;
+}
+
 /* Utility Classes */
 
 .padding-block-100{
@@ -528,4 +537,22 @@ main .container{
 
 .fw-semibold{
   font-weight: 700;
+}
+
+.cta-hover:hover{
+  background-color: rgba(0, 0, 0, 0.185);
+  border-radius: 3rem;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.cta-icon-area, .see-more{
+  display: flex;
+  flex-grow: 0px;
+  max-width: fit-content;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  gap: clamp(var(--size-250), 5vh, var(--size-300));
+  transition: background-color 0.4s ease-in-out;
+  border-radius: 3rem;
 }
