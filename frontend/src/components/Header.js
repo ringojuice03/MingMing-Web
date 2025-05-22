@@ -18,9 +18,9 @@ export const Header = () => {
                         </ul>
                     </nav>
                     <div className="buttons">
-                        <button><img src={cart}/></button> 
-                        <button><img src={notification}/></button>
-                        <button><img src={profile}/></button>
+                        <button><img src={cart} alt="cart button"/></button> 
+                        <button><img src={notification} alt="notifications button"/></button>
+                        <button><img src={profile} alt="profile button"/></button>
                     </div>
                 </div>
             </div>
